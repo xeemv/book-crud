@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <title>Book Club Crud</title>
+  </head>
+  <body class="container" style="background-color: rgba(33, 33, 194, 0.2)">
+    <h1 class="text-center"><i>Book Club Crud</i></h1>
+    <br>
+    <br>
+    <div class="container">
+      <!-- <div class="row">
+        <div class="col"> -->
+          <h2 class="text-center">Add Your Book</h2>
+        <!-- </div> -->
+      </div>
+      <br>
+      <br>
+      <table>
+        
+        <tr>
+          <td>
+            <div class="card text-black bg-info mb-3" style="width: 18rem;">
+              <div class="card-header text-center">
+                <strong>Key for this page:</strong>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" style="color: black;"><strong>Add button = </strong>This add a new entry to the table below.</li>
+                <li class="list-group-item" style="color: black;"><strong>Update button = </strong>This will save any new changes to an entry.</li>
+                <!-- <li class="list-group-item">Vestibulum at eros</li> -->
+              </ul>
+            </div>
+
+          
+            <!-- html for the form of our crud operations -->
+            <form onsubmit="event.preventDefault(); onBookFormAdd(); onBookFormUpdate();" autocomplete="off">
+              <!-- <form onsubmit="event.preventDefault(); onBookFormUpdate();" autocomplete="off"></form> -->
+              <!-- autocomplete off will prevent the browser from trying to predict what the user will type based on past entries -->
+              <!--event.preventDefault will stop the page from reloading and sending form data through the curie string/url parameter-->
+              <!-- this should only work when the user clicks on the formSubmit -->
+            <div class="form-group" >
+                 <!-- author section -->
+              <label for="formGroupExampleInput"><strong>Author</strong></label>
+              <input
+                type="text"
+                class="form-control"
+                id="Author"
+                placeholder="Author"
+                required
+              />
+            </div>
+            <div class="form-group" >
+                 <!-- title section -->
+              <label for="formGroupExampleInput2"><strong>Book Title</strong></label>
+              <input
+                type="text"
+                class="form-control"
+                id="Title"
+                placeholder="Book Title"
+                required
+              />
+            </div>
+            <div class="form-group">
+                 <!-- Rating section -->
+              <label for="formGroupExampleInput2"><strong>Rating</strong></label>
+              <input
+                type="text"
+                class="form-control"
+                id="Rating"
+                placeholder="Ratings"
+                required
+              />
+            </div>
+             <!-- add button -->
+          
+
+             <!-- <button onclick="addHtmlTableRow()">Add</button> -->
+             <button class="btn btn-primary btn-block" id="Add">Add</button>
+             <br>
+             <button class="btn btn-success btn-block" id="Update">Update</button>
+  
+
+            <br />
+            <br />
+      
+
+           <!-- table to list our data -->
+           <table class="thead-dark table-bordered table-hover" id="bookList" style="border: 5px solid">
+            <thead>
+              <tr>
+                <th class="text-center">Author</th>
+                <th class="text-center">Title</th>
+                <th class="text-center">Rating</th>
+                <th class="text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- leave this empty -->
+            </tbody>
+          </table>
+          </td>
+        </tr>
+       
+      </table>
+      </div>
+    </div>
+    
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./script.js"></script>
+  </body>
+  <footer class="text-center text-lg-start">
+    <!-- Copyright -->
+    <div
+      class="text-center p-3">
+      © 2022 Copyright:
+      <p1>Book Club Crud</p1>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</html>
